@@ -1,0 +1,17 @@
+<h1>Restaurant: <%= @restaurant.name %></h1>
+
+<h3>Address</h3>
+<p><%= @restaurant.address %></p>
+
+<h3>Category</h3>
+<p><%= @restaurant.category %></p>
+
+<div>
+  <ul class="list-unstyled list-inline">
+    <li><%= link_to 'View comments', class: "btn btn-primary" %></li>
+    <li><%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-primary" %></li>
+    <li><%= link_to 'Destroy', @restaurant, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></li>
+  </ul>
+</div>
+
+<%= link_to "Back", restaurants_path %>

@@ -44,4 +44,33 @@ restaurants_attributes = [
     category: 'belgian'
 }]
 Restaurant.create!(restaurants_attributes)
+
+puts 'Creating reviews...'
+reviews_attributes = [
+  {
+    content: 'very good restaurant',
+    rating: 5,
+    restaurant_id: Restaurant.all.sample.id
+},
+{
+    content: 'not so good place to eat',
+    rating: 3,
+    restaurant_id: Restaurant.all.sample.id
+},
+{
+    content: 'lovely for families',
+    rating: 2,
+    restaurant_id: Restaurant.all.sample.id
+},
+{
+    content: 'welcoming staff',
+    rating: 4,
+    restaurant_id: Restaurant.all.sample.id
+},
+{
+    content: 'easy to get to',
+    rating: 1,
+    restaurant_id: Restaurant.all.sample.id
+}]
+Review.create!(reviews_attributes)
 puts 'Finished!'
