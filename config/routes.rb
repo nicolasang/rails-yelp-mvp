@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   end
 
   resources :restaurants do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :index]
   end
 
   resources :restaurants, only: [:index, :show, :new, :create]
-  resources :reviews, only: [:index, :show]
+  resources :reviews, only: [:show]
 end

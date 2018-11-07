@@ -1,0 +1,23 @@
+<h1>Reviews of a specific Restaurant</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Content</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.restaurant.name %></td>
+        <td><%= review.content %></td>
+        <td><%= review.rating %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Back", restaurant_path(@restaurant), class: "btn btn-primary" %>
